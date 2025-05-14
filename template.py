@@ -1,5 +1,5 @@
 import os
-from pathlib import Path
+from pathlib import Path #A more modern way to handle file system paths.
 import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]:%(message)s:')
@@ -32,7 +32,7 @@ lists_of_file = [
 ]
 
 for filepath in lists_of_file:
-    filepath = Path(filepath)  # Use Path instead of path
+    filepath = Path(filepath)  
     filedir, filename = os.path.split(filepath)
 
     if filedir != "":
