@@ -2,6 +2,7 @@ from mlproject import logger
 from mlproject.pipeline.stage_01_data_ingestion import DataIngestionTraningPipeline
 from mlproject.pipeline.stage_2_data_validation import DataValidationTraningPipeline 
 from mlproject.pipeline.stage_03_data_transformation import DataTransformationTraningPipeline 
+from mlproject.pipeline.stage_04_model_trainer import MOdelTraningPipeline 
 # logger.info("welcome to our custom login")
 
 
@@ -29,6 +30,8 @@ except Exception as e:
     logger.exceptiona(e)
     raise e
 
+
+
 STAGE_NAME="Data transformation stage"
 
 try:
@@ -40,3 +43,13 @@ except Exception as e:
     logger.exceptiona(e)
     raise e
 
+
+STAGE_NAME="Model Trainer stage"
+try:
+        logger.info(f">>>>> stage {STAGE_NAME} started <<<<<<<<<")
+        obj=MOdelTraningPipeline()
+        obj.main()
+        logger.info(f">>>>>> stage {STAGE_NAME} has completed <<<<<\n\n x========================================x")
+except Exception as e:
+        logger.exceptiona(e)
+        raise e 
