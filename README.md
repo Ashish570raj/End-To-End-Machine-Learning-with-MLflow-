@@ -1,8 +1,5 @@
-Here's the **final `README.md` template** updated to include clear guidance on creating a `.env` file and loading it using `python-dotenv` before the DagsHub environment section:
 
----
-
-````markdown
+````
 # 🧠 End-to-End Machine Learning Project with MLflow 🚀
 
 A complete ML project pipeline integrated with MLflow for experiment tracking and model registry. Deployed locally and remotely via DagsHub.
