@@ -1,3 +1,3 @@
 ElasticNet:
-  alpha: 0.9
-  l1_ratio: 0.8
+  alpha: 0.1        # Lower values often generalize better (less penalty)
+  l1_ratio: 0.5     # Balance between L1 and L2 regularization

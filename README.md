@@ -1,169 +1,132 @@
-# End-to-end-Machine-Learning-Project-with-MLflow
+Here's the **final `README.md` template** updated to include clear guidance on creating a `.env` file and loading it using `python-dotenv` before the DagsHub environment section:
 
+---
 
-## Workflows
+````markdown
+# 🧠 End-to-End Machine Learning Project with MLflow 🚀
 
-1. Update config.yaml
-2. Update schema.yaml
-3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline 
-8. Update the main.py
-9. Update the app.py
+A complete ML project pipeline integrated with MLflow for experiment tracking and model registry. Deployed locally and remotely via DagsHub.
 
+---
 
+## 📌 Workflow Overview
 
-# How to run?
-### STEPS:
+1. ✅ Update `config.yaml`
+2. ✅ Update `schema.yaml`
+3. ✅ Update `params.yaml`
+4. ✅ Define `entity` classes
+5. ✅ Configure settings in `ConfigurationManager` (`src/config`)
+6. ✅ Implement core logic in `components`
+7. ✅ Create pipelines for each ML stage
+8. ✅ Connect everything in `main.py`
+9. ✅ Launch your app via `app.py`
 
-Clone the repository
+---
 
+## 🛠️ How to Run the Project
+
+### 🔁 Step-by-Step
+
+### 1️⃣ Clone the Repository
 ```bash
-https://github.com/Ashish570raj/End-To-End-Machine-Learning-with-MLflow-
-```
-### STEP 01- Create a conda environment after opening the repository
+git clone https://github.com/Ashish570raj/End-To-End-Machine-Learning-with-MLflow-
+cd End-To-End-Machine-Learning-with-MLflow-
+````
+
+### 2️⃣ Create a Conda Environment
 
 ```bash
 conda create -n mlproj python=3.8 -y
-```
-
-```bash
 conda activate mlproj
 ```
 
+### 3️⃣ Install Dependencies
 
-### STEP 02- install the requirements
 ```bash
 pip install -r requirements.txt
 ```
 
+---
 
-```bash
-# Finally run the following command
-python app.py
-```
+## 🔐 Setup Environment Variables with `.env`
 
-Now,
-```bash
-open up you local host and port
-```
+### 1️⃣ Create a `.env` file in the root of the project:
 
-
-
-## MLflow
-
-[Documentation](https://mlflow.org/docs/latest/index.html)
-
-
-##### cmd
-- mlflow ui
-
-### dagshub
-[dagshub](https://dagshub.com/)
-
-import dagshub
-dagshub.init(repo_owner='Ashish570raj', repo_name='End-To-End-Machine-Learning-with-MLflow-', mlflow=True)
-
-import mlflow
-with mlflow.start_run():
-  mlflow.log_param('parameter name', 'value')
-  mlflow.log_metric('metric name', 1)
-
-Run this to export as env variables:
-
-```bash
-
+```env
 MLFLOW_TRACKING_URI=https://dagshub.com/<username>/<repo>.mlflow
 MLFLOW_TRACKING_USERNAME=your_username
 MLFLOW_TRACKING_PASSWORD=your_dagshub_token
+```
+
+### 2️⃣ Load the `.env` file in your code:
+
+```python
+from dotenv import load_dotenv
+load_dotenv()
+```
+
+Add the above two lines in the entry script (e.g., `main.py`, `pipeline/stage.py`, or `app.py`).
+
+---
+
+## 📊 MLflow for Experiment Tracking
+
+### 🧪 Start MLflow UI (Local)
+
+```bash
+mlflow ui
+```
+
+Open `http://127.0.0.1:5000` in your browser.
+
+---
+
+## ☁️ Connect to DagsHub for Remote Tracking
+
+### ✨ Initialize DagsHub
+
+```python
+import dagshub
+
+dagshub.init(
+    repo_owner='Ashish570raj',
+    repo_name='End-To-End-Machine-Learning-with-MLflow-',
+    mlflow=True
+)
+```
+
+### 🔍 Log Parameters and Metrics with MLflow
+
+```python
+import mlflow
+
+with mlflow.start_run():
+    mlflow.log_param("param_name", "value")
+    mlflow.log_metric("metric_name", 0.95)
+```
+
+---
+
+## 📚 Documentation & Resources
+
+* [MLflow Docs](https://mlflow.org/docs/latest/index.html)
+* [DagsHub Docs](https://dagshub.com/docs/)
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📬 Contact
+
+Created by **Ashish Raj** – [LinkedIn](https://linkedin.com/in/ashish570raj)
+
+---
 
 ```
 
-
-
-# AWS-CICD-Deployment-with-Github-Actions
-
-## 1. Login to AWS console.
-
-## 2. Create IAM user for deployment
-
-	#with specific access
-
-	1. EC2 access : It is virtual machine
-
-	2. ECR: Elastic Container registry to save your docker image in aws
-
-
-	#Description: About the deployment
-
-	1. Build docker image of the source code
-
-	2. Push your docker image to ECR
-
-	3. Launch Your EC2 
-
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.ap-south-1.amazonaws.com/mlproj
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = us-east-1
-
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
-
-    ECR_REPOSITORY_NAME = simple-app
-
-
-
-
-## About MLflow 
-MLflow
-
- - Its Production Grade
- - Trace all of your expriements
- - Logging & tagging your model
-
-
+Let me know if you’d like this saved as a file, or want me to include badges (like build passing, stars, license, etc.) at the top!
+```
