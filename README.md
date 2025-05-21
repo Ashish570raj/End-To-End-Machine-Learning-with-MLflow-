@@ -45,6 +45,16 @@ conda activate mlproj
 pip install -r requirements.txt
 ```
 
+```bash
+# Finally run the following command
+python app.py
+```
+
+Now,
+```bash
+open up you local host and port
+```
+
 ---
 
 ## 🔐 Setup Environment Variables with `.env`
@@ -110,6 +120,15 @@ with mlflow.start_run():
 
 * [MLflow Docs](https://mlflow.org/docs/latest/index.html)
 * [DagsHub Docs](https://dagshub.com/docs/)
+
+---
+
+## About MLflow 
+MLflow
+
+ - Its Production Grade
+ - Trace all of your expriements
+ - Logging & tagging your model
 
 ---
 
