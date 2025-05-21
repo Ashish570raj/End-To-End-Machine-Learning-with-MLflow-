@@ -1,8 +1,12 @@
-
-````
 # 🧠 End-to-End Machine Learning Project with MLflow 🚀
 
-A complete ML project pipeline integrated with MLflow for experiment tracking and model registry. Deployed locally and remotely via DagsHub.
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Ashish570raj/End-To-End-Machine-Learning-with-MLflow-/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![MLflow Tracking](https://img.shields.io/badge/mlflow-active-blue)](https://mlflow.org)
+[![DagsHub Integration](https://img.shields.io/badge/DagsHub-Enabled-yellowgreen)](https://dagshub.com/)
+[![Python Version](https://img.shields.io/badge/Python-3.8-blue.svg)](https://www.python.org/)
+
+A complete end-to-end machine learning pipeline using `MLflow` for tracking, `DagsHub` for collaboration, and Python for development. Includes training, evaluation, logging, and deployment steps.
 
 ---
 
@@ -22,13 +26,10 @@ A complete ML project pipeline integrated with MLflow for experiment tracking an
 
 ## 🛠️ How to Run the Project
 
-### 🔁 Step-by-Step
-
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Ashish570raj/End-To-End-Machine-Learning-with-MLflow-
 cd End-To-End-Machine-Learning-with-MLflow-
-````
 
 ### 2️⃣ Create a Conda Environment
 
