@@ -1,4 +1,4 @@
-# 🧠 End-to-End Machine Learning Project with MLflow 🚀
+#  End-to-End Machine Learning Project with MLflow 
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Ashish570raj/End-To-End-Machine-Learning-with-MLflow-/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -24,12 +24,13 @@ A complete end-to-end machine learning pipeline using `MLflow` for tracking, `Da
 
 ---
 
-## 🛠️ How to Run the Project
+## How to Run the Project
 
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Ashish570raj/End-To-End-Machine-Learning-with-MLflow-
 cd End-To-End-Machine-Learning-with-MLflow-
+```
 
 ### 2️⃣ Create a Conda Environment
 
@@ -69,7 +70,7 @@ Add the above two lines in the entry script (e.g., `main.py`, `pipeline/stage.py
 
 ## 📊 MLflow for Experiment Tracking
 
-### 🧪 Start MLflow UI (Local)
+### Start MLflow UI (Local)
 
 ```bash
 mlflow ui
@@ -124,7 +125,4 @@ Created by **Ashish Raj** – [LinkedIn](https://linkedin.com/in/ashish570raj)
 
 ---
 
-```
 
-Let me know if you’d like this saved as a file, or want me to include badges (like build passing, stars, license, etc.) at the top!
-```
